@@ -1,0 +1,33 @@
+{
+  "name": "bard-discord-bot",
+  "version": "1.0.0",
+  "description": "A discord.js bot with **Google's Bard** integrated",
+  "main": "/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BotStudios/bard-discord-bot.git"
+  },
+  "keywords": [
+    "bard",
+    "google",
+    "discord"
+  ],
+  "author": "Chee Yong Lee <tojoeleeofficial@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BotStudios/bard-discord-bot/issues"
+  },
+  "homepage": "https://github.com/BotStudios/bard-discord-bot#readme",
+  "dependencies": {
+    "@discordjs/rest": "^2.0.1",
+    "discord-api-types": "^0.37.56",
+    "discord.js": "^13.15.1",
+    "express": "^4.18.2",
+    "googlebard": "^1.0.4"
+  }
+}
