@@ -1,9 +1,3 @@
-import express from "express"
-const app = express();
-const port = 3000;
-app.get('/', (req, res) => res.send('Discord: @leraan'));
-app.listen(port);
-
 import { Bard } from "googlebard";
 import { Client, Intents, MessageAttachment, MessageEmbed, version } from "discord.js";
 const client = new Client({
@@ -46,7 +40,7 @@ async function send(message, result) {
       result = result.slice(end, result.length);
     } catch (e) {
       tryCount--;
-      console.log(e);
+      console.error(e);
     }
   }
   if (embeds.length > 8) {
@@ -72,7 +66,7 @@ client.on("messageCreate", async (message) => {
     const result = await bot.ask(content);
     await send(message, result);
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
 });
 
@@ -86,7 +80,7 @@ client.on("messageCreate", async (message) => {
       const result = await bot.ask(content);
       await send(message, result);
     } catch (e) {
-      console.log(e);
+      console.error(e);
     }
   }
 });
